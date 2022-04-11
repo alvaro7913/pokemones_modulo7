@@ -12,5 +12,19 @@ CREATE TABLE pokemones(
 );
 SELECT * FROM pokemones;
 
-\copy pokemones FROM 'pokemonesKanto.csv' csv headers;
+\COPY pokemones FROM 'pokemonesKanto.csv' csv headers;
 SELECT * FROM pokemones LIMIT 10;
+
+CREATE TABLE mis_pokemones(
+    pokedex INT,
+    fecha_captura DATE,
+    lugar VARCHAR(30),
+    huevo BOOLEAN,
+    peso FLOAT,
+    estature FLOAT,
+    FOREIGN KEY (pokedex) REFERENCES pokemones(pokedex)
+);
+SELECT * FROM mis_pokemones;
+
+\COPY mis_pokemones FROM 'mis_pokemonesKanto.csv' csv headers;
+SELECT * FROM mis_pokemones;
