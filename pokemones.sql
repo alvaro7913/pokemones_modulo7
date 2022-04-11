@@ -38,3 +38,5 @@ NSERT INTO mis_pokemones (pokedex, fecha_captura, lugar, huevo, peso, estatura)
 VALUES (134, '2021-04-12', 'La loma del toro', false, 25.6, 0.8);
 
 SELECT * FROM mis_pokemones ORDER BY fecha_captura DESC LIMIT 3;
+SELECT * FROM mis_pokemones WHERE EXTRACT (YEAR FROM fecha_captura) = 2021;
+SELECT SUM(peso) AS total FROM mis_pokemones;
