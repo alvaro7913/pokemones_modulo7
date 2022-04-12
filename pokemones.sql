@@ -32,7 +32,7 @@ SELECT * FROM mis_pokemones LIMIT 5;
 -- consulta con alias
 SELECT pokedex AS número FROM pokemones WHERE nombre = 'Eevee';
 
-NSERT INTO mis_pokemones (pokedex, fecha_captura, lugar, huevo, peso, estatura)
+INSERT INTO mis_pokemones (pokedex, fecha_captura, lugar, huevo, peso, estatura)
 VALUES (133, '2021-04-12', 'Puente Asalto', false, 15.6, 0.3);
 INSERT INTO mis_pokemones (pokedex, fecha_captura, lugar, huevo, peso, estatura)
 VALUES (134, '2021-04-12', 'La loma del toro', false, 25.6, 0.8);
